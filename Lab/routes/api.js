@@ -153,6 +153,7 @@ router.put("/update-fruit-by-id/:id", async (req, res) => {
       updatefruit.description = data.description ?? updatefruit.description;
       updatefruit.id_distributor =
         data.id_distributor ?? updatefruit.id_distributor;
+        result = await updatefruit.save()
     }
     //Tạo một đối tượng mới
     //Thêm vào database
